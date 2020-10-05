@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
 Tremebunda google calculator
 
-By VektorElektor
+By victorbacon
 """
 
 from selenium import webdriver
