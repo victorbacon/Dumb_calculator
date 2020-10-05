@@ -78,7 +78,7 @@ class DumbassBot():
         #equal.click()
         
         
-    def traduct(self, oper):         #input your operation as strings2+3
+    def traduct(self, oper):         #input your operation as strings
         numlist= self.defnum()
         oplist= self.defop()
         equal= oplist[0]
@@ -109,7 +109,7 @@ class DumbassBot():
             elif letr=='-' :
                 num= oplist[2]
             else:
-                print('fuck u and ur math')
+                print('Im too dumb to do that :(, please try other operation')
                 
             num.click()
         equal.click()
