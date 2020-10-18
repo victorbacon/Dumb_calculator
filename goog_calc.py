@@ -7,6 +7,7 @@ By victorbacon
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.keys import Keys
 
 
 class DumbassBot():
@@ -28,14 +29,21 @@ class DumbassBot():
         barra = self.driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
         barra.send_keys('calculator')
         
-        # The recent search tab opens and wont let us click on 'search'
-        self.driver.switch_to_default_content()
-                #anywhere = self.driver.find_element_by_xpath('//*[@id="hplogo"]')    PREVIOUS ATTEMPT TO SOLVE THE ISSUE
-                #anywhere.click()
+# The recent search tab opens and wont let us click on 'search'
+#self.driver.switch_to_default_content()
+#anywhere = self.driver.find_element_by_xpath('//*[@id="hplogo"]')    PREVIOUS ATTEMPT TO SOLVE THE ISSUE
+#anywhere.click()
         
-        #click search 
-        busc_btn = self.driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]')
-        busc_btn.click()
+#click search 
+#busc_btn = self.driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]')
+#busc_btn.click()
+        
+        
+        #   I DON'T KNOW IF THE RECENT SEARCH TAB IS AN IFRAME OR NOT, SO I'LL JUST HIT ENTER
+        barra.send_keys(Keys.ENTER)
+        
+        
+        
         
     def defnum(self):
         numlist=[]          #ordered from 0 to 9  [0,1,2,3,...9]
@@ -122,9 +130,6 @@ bot = DumbassBot()
 bot.gocalc()
 bot.traduct(oper)
 #bot.defnum()      PREVIOUS ATTEMPT
-        
-        
-        
         
         
         
